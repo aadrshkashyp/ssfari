@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exchange Rate</title>
+  </head>
+
+  <body>
+    <h1>Exchange Rate</h1>
+    <form>
+      <label for="from">From:</label>
+      <select id="from" name="from">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+      </select>
+      <label for="to">To:</label>
+      <select id="to" name="to">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+      </select>
+      <label for="amount">Amount:</label>
+      <input type="text" id="amount" name="amount" />
+      <button onclick="getExchangeRate()">Convert</button>
+    </form>
+    <p id="result"></p>
+    <script src="script.js"></script>
+  </body>
+</html>
