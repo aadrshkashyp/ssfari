@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tip Calculator</title>
+    <style>
+      #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      #input-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      label {
+        font-size: 1.2em;
+        margin-right: 10px;
+      }
+
+      input[type="number"] {
+        border-radius: 5px;
+        padding: 10px;
+        border: none;
+        font-size: 1.2em;
+        width: 150px;
+        margin-right: 10px;
+      }
+
+      select {
+        border-radius: 5px;
+        padding: 10px;
+        border: none;
+        font-size: 1.2em;
+        width: 150px;
+      }
+
+      #calculate-btn {
+        background: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      #calculate-btn:hover {
+        background: #555;
+      }
+
+      #tip-amount,
+      #total-amount {
+        text-align: center;
+        font-size: 1.2em;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Tip Calculator</h1>
+      <div id="input-container">
+        <label>Bill Amount:</label>
+        <input type="number" id="bill-amount" placeholder="Enter bill amount" />
+      </div>
+      <div id="input-container">
+        <label>Tip Percentage:</label>
+        <select id="tip-percentage">
+          <option value="10">10%</option>
+          <option value="15">15%</option>
+          <option value="20">20%</option>
+        </select>
+      </div>
+      <button id="calculate-btn">Calculate</button>
+      <p id="tip-amount"></p>
+      <p id="total-amount"></p>
+    </div>
+    <script>
+              const billAmountEl = document.getElementById('bill-amount');
+      const tipPercentageEl = document.getElementById('tip-percentage');
+      const calculateBtn = document.getElementById('calculate-btn');
+      const tipAmountEl = document.getElementById('tip-amount');
+      const totalAmountEl = document.getElementById('total-amount');
+
+      calculateBtn.addEventListener('click', calculateTip);
+
+      function calculateTip() {
+      const billAmount = billAmountEl.value;
+      const tipPercentage = tipPercentageEl.value;
+
+      const tipAmount = billAmount * (tipPercentage / 100);
+      const totalAmount = parseFloat(billAmount) + parseFloat(tipAmount);
+
+      tipAmountEl.innerText = Tip Amount: $${tipAmount.toFixed(2)};
+      totalAmountEl.innerText = Total Amount: $${totalAmount.toFixed(2)};
+      }
+    </script>
+  </body>
+</html>
