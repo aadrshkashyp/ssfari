@@ -16,6 +16,8 @@ This repository contains a collection of Javascript projects created as part of 
 
 ## Live Demos
 
+- https://ssfari.vercel.app/
+
 You can find live demos for each project on the SkillSafari website
 Running the projects locally
 
