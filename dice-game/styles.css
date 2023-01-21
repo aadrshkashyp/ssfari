@@ -1,0 +1,52 @@
+/* styles.css */
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #ddd, #fff);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  margin: 50px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  margin: 0 10px;
+  font-size: 3em;
+  text-align: center;
+}
+
+#roll-btn {
+  background: none;
+  border: 2px solid #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  margin-top: 20px;
+  box-shadow: 3px 3px 10px rgba;
+}
+
+.player {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 10px;
+}
