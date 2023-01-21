@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Exchange Rate</title>
+    <title>Currency Converter</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
-
   <body>
-    <h1>Exchange Rate</h1>
-    <form>
-      <label for="from">From:</label>
-      <select id="from" name="from">
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="GBP">GBP</option>
-      </select>
-      <label for="to">To:</label>
-      <select id="to" name="to">
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="GBP">GBP</option>
-      </select>
-      <label for="amount">Amount:</label>
-      <input type="text" id="amount" name="amount" />
-      <button onclick="getExchangeRate()">Convert</button>
-    </form>
-    <p id="result"></p>
+    <div id="container">
+      <h1>Currency Converter</h1>
+      <div id="input-container">
+        <input type="number" id="amount-one" placeholder="Enter amount" />
+        <select id="currency-one">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="JPY">JPY</option>
+        </select>
+      </div>
+      <button id="swap">Swap</button>
+      <div id="input-container">
+        <input type="number" id="amount-two" placeholder="Converted amount" />
+        <select id="currency-two">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="JPY">JPY</option>
+        </select>
+      </div>
+      <p id="rate"></p>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
